@@ -1,0 +1,24 @@
+.card {
+  padding: 2rem;
+  border-radius: 15%;
+  border: 2px solid white;
+}
+
+.card .btn-swap {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  margin: 6px auto;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: aquamarine;
+}

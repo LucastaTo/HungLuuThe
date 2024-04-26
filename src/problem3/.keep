@@ -1,0 +1,12 @@
+1. Inefficient Sorting Algorithm:
+   The sorting algorithm used (sort method) has a time complexity of O(n log n). If the balances array is large, this can lead to performance issues
+2. Unnecessary Re-renders:
+   The sortedBalances and formattedBalances are recalculated on every render, even if the balances or prices haven't changed.
+3. Using Index as Key:
+   This can cause issues if the order of the balances changes, leading to incorrect rendering and potential bugs.
+4. Inconsistent Variable Naming:
+   Inconsistent variable naming (lhs, rhs) can make the code harder to understand.
+5. Unused Props Interface:
+   The Props interface extends BoxProps, but it's not being utilized in the component.
+6. Hardcoded Priorities:
+   The priorities for different blockchains are hardcoded within the getPriority function.
