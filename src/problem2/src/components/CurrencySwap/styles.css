@@ -1,0 +1,80 @@
+.currency-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 16px;
+}
+
+.btn-swap {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  margin: 6px auto;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  width: 25px;
+}
+.btn-swap:hover {
+  display: flex;
+  background-color: #ffcdcd;
+  border-radius: 100%;
+  width: 25px;
+  justify-content: center;
+}
+
+.swap-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.currency-select,
+.amount-input {
+  margin-bottom: 20px;
+}
+
+.currency-select label,
+.amount-input label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.currency-select select,
+.amount-input input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result h3 {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.field-currency {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.field-currency .field-currency-input {
+  width: 100%;
+  padding: 8px;
+  appearance: none;
+  padding: 5px 10px;
+  border-radius: 12px;
+}

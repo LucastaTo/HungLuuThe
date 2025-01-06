@@ -1,0 +1,98 @@
+.select-wrapper {
+  position: relative;
+}
+
+input[type="text"] {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.dropdown-btn {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid rgb(204, 204, 204);
+  background: #ccd9d505;
+  cursor: pointer;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  border-radius: 12px;
+}
+
+.dropdown {
+  padding: 15px;
+  padding-top: 0;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  border-top: none;
+  border-right: 1px solid rgb(204, 204, 204);
+  border-bottom: 1px solid rgb(204, 204, 204);
+  border-left: 1px solid rgb(204, 204, 204);
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  z-index: 10;
+  box-sizing: border-box;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* Search input inside the dropdown */
+.dropdown .search-dropdown {
+  padding: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  z-index: 2;
+}
+
+/* Options for dropdown */
+.dropdown > div {
+  padding: 8px;
+  cursor: pointer;
+  background-color: white;
+  z-index: 2;
+}
+
+.dropdown > div:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown > div.selected {
+  background-color: #f0f0f0; /* Highlight selected option */
+}
+
+/* Show scrollbar when hovering */
+.dropdown:hover {
+  overflow-y: auto; /* Show scroll when hovering */
+}
+
+/* Styling the scrollbar */
+.dropdown::-webkit-scrollbar {
+  width: 6px; /* Narrow the scrollbar */
+}
+
+/* Styling the scrollbar track */
+.dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light background for the track */
+}
+
+/* Styling the scrollbar thumb */
+.dropdown::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Hover effect for scrollbar thumb */
+.dropdown::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darken the thumb when hovering */
+}

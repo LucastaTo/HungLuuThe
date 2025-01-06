@@ -1,0 +1,22 @@
+Project Overview
+This project aims to create a currency swap form where users can exchange assets between different currencies. The form will take user input (amount and source/target currencies) and calculate the exchange based on real-time token prices fetched from an API. Token images will be fetched from a predefined repository.
+
+Key Components
+React + TypeScript:
+
+React is used to build the user interface (UI), with components organized for modularity and reusability.
+TypeScript ensures type safety, improving code reliability and maintainability.
+Vite:
+
+Vite is used as the build tool for fast development and efficient bundling, offering a smooth experience during development.
+API Integration:
+
+The project fetches real-time token prices from this API to calculate exchange rates.
+Token icons are sourced from the Switcheo token repository.
+Form Functionality:
+
+Input validation is implemented to ensure correct data entry.
+The form provides real-time updates for currency conversion rates and handles errors gracefully.
+Testing with Jest:
+
+Jest is used for unit and integration testing to ensure the correctness of components and functionality.

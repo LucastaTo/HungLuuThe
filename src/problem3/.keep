@@ -1,12 +1,38 @@
-1. Inefficient Sorting Algorithm:
-   The sorting algorithm used (sort method) has a time complexity of O(n log n). If the balances array is large, this can lead to performance issues
-2. Unnecessary Re-renders:
-   The sortedBalances and formattedBalances are recalculated on every render, even if the balances or prices haven't changed.
-3. Using Index as Key:
-   This can cause issues if the order of the balances changes, leading to incorrect rendering and potential bugs.
-4. Inconsistent Variable Naming:
-   Inconsistent variable naming (lhs, rhs) can make the code harder to understand.
-5. Unused Props Interface:
-   The Props interface extends BoxProps, but it's not being utilized in the component.
-6. Hardcoded Priorities:
-   The priorities for different blockchains are hardcoded within the getPriority function.
+Inefficient Sorting: Sorting the balances array on every render with O(n log n) complexity can cause performance issues with large datasets.
+Improvement: Optimize sorting or trigger it only when relevant data changes.
+
+Unnecessary Re-renders: sortedBalances and formattedBalances are recalculated on every render, even if the balances or prices haven’t changed.
+Improvement: Memoize or recompute only when necessary.
+
+Using Index as Key: Using index as a key in React lists can lead to bugs when the order of items changes.
+Improvement: Use a unique identifier for each list item instead of the index.
+
+Inconsistent Variable Naming: Inconsistent variable names (e.g., lhs, rhs) make the code harder to understand.
+Improvement: Use clear, consistent names for better readability.
+
+Unused Props Interface: The Props interface extends BoxProps but is not utilized.
+Improvement: Remove unnecessary prop extensions to clean up the code.
+
+Hardcoded Priorities: Blockchain priorities are hardcoded, limiting flexibility.
+Improvement: Externalize priorities or make them configurable.
+
+Repetitive Filtering in useMemo: Filtering is done inside useMemo, causing unnecessary recomputations on every render.
+Improvement: Filter once before sorting to optimize performance.
+
+Inefficient Sorting Logic: Sorting inside useMemo is inefficient and causes recalculation even when it's not needed.
+Improvement: Optimize sorting and memoize only when relevant data changes.
+
+Inconsistent useMemo: useMemo is used inefficiently, causing unnecessary recalculations.
+Improvement: Fine-tune useMemo dependencies to avoid unnecessary recomputations.
+
+Inefficient Number Formatting: Using toFixed() for formatting is inefficient and lacks flexibility.
+Improvement: Use a more efficient and flexible formatting tool like Intl.NumberFormat or a library.
+
+Unnecessary Re-computation of USD Value: Recalculating the USD value on every render is inefficient.
+Improvement: Cache USD values and recompute only when the relevant data changes.
+
+Key Prop in Rows Mapping: Using index as a key in dynamic lists is problematic.
+Improvement: Use a unique identifier (e.g., balance.currency) as the key.
+
+Unnecessary Destructuring: Destructuring props that are not used in the component.
+Improvement: Remove unnecessary destructuring if props like children or className are not used.
